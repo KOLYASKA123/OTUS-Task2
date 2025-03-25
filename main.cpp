@@ -1,9 +1,13 @@
 #include <ip_filter.hpp>
 #include <iostream>
+#include <string>
 #include "version.h"
 
 int main() {
     std::cout << "Version: " << version() << std::endl;
-    ip_filter("../ip_filter.tsv");
+    std::string filename;
+    std::cout << "Введите название файла с расширением tsv: "; 
+    std::getline(std::cin, filename);
+    ip_filter(filename);
     return 0;
 }
