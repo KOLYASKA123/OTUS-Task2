@@ -3,10 +3,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
-
-using split_string = std::vector<std::string>;
-using ip_addr = std::vector<int>;
-using ip_pool = std::vector<ip_addr>;
+#include "ip_filter.hpp"
 
 /*
     Метод для разделения строки на отдельные составляющие с помощью указанного разделителя.
