@@ -1,4 +1,3 @@
-#include "build/version.h"
 #include <version.h>
 
 int version() {
