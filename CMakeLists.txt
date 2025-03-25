@@ -11,15 +11,15 @@ configure_file(version.h.in version.h)
 
 add_subdirectory(ip_filter)
 
-add_executable(ip_filter main.cpp)
+add_executable(ip_filter_cli main.cpp)
 add_library(version version.cpp)
 
-target_include_directories(ip_filter PUBLIC ${INC_DIRS})
-target_link_libraries(ip_filter ip_filter_lib version)
+target_include_directories(ip_filter_cli PUBLIC ${INC_DIRS})
+target_link_libraries(ip_filter_cli ip_filter_lib version)
 
 include_directories(${CMAKE_BINARY_DIR} ${CMAKE_SOURCE_DIR})
 
-install(TARGETS ip_filter RUNTIME DESTINATION bin)
+install(TARGETS ip_filter_cli RUNTIME DESTINATION bin)
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
 set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
